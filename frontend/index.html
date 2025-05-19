@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+  <meta charset="UTF-8">
+  <title>🛡 Kripto Pulqabı və İmza Sistemi</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>🛡 Kripto Pulqabı və Sənəd İmzalama Sistemi</h1>
+
+    <section>
+      <h2>🔑 Pulqabı Yarat</h2>
+      <button onclick="generateWallet()">Yeni Pulqabı Yarat</button>
+      <div class="output">
+        <p><strong>Public Key:</strong> <span id="publicKey"></span></p>
+        <p><strong>Private Key:</strong> <span id="privateKey"></span></p>
+      </div>
+    </section>
+
+    <section>
+      <h2>✍️ Sənədi İmzala</h2>
+      <textarea id="message" placeholder="İmzalayacağınız mesaj..."></textarea>
+      <textarea id="signPrivateKey" placeholder="Private Key..."></textarea>
+      <button onclick="signMessage()">İmzala</button>
+      <div class="output">
+        <p><strong>İmza:</strong> <span id="signature"></span></p>
+      </div>
+    </section>
+
+    <section>
+      <h2>🔍 İmzanı Yoxla</h2>
+      <textarea id="verifyMessage" placeholder="Mesaj..."></textarea>
+      <textarea id="verifySignature" placeholder="İmza..."></textarea>
+      <textarea id="verifyPublicKey" placeholder="Public Key..."></textarea>
+      <button onclick="verifySignature()">Yoxla</button>
+      <div class="output">
+        <p><strong>Nəticə:</strong> <span id="verifyResult"></span></p>
+      </div>
+    </section>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
